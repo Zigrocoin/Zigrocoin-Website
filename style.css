@@ -1,0 +1,315 @@
+/* 
+Zigrocoin Website CSS
+Created by Patryk Dubaniewicz 
+Version 1.0
+*/
+
+/* Reffers to the whole website */
+* {
+    background-color: #191919;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/* basic elements styles */
+.h0,h1,h2,h3,h4,p {
+    color:#ececec;
+}
+
+.h0 {
+    font-size: 50px;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 25px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+h4 {
+    font-size: 15px;
+}
+p {
+    font-size: 15px;
+}
+a {
+    color: rgb(231, 231, 231);
+}
+
+/* Navbar Styles */
+nav, .nav_links, .nav_links li, .logo, header, li, .a, button {
+    background-color: #080808;
+    opacity: 100%;
+}
+
+li,.a,button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ececec;
+    text-decoration: none;
+
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 5%;
+
+}
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    
+
+}
+.nav_links {
+    list-style: none;
+    text-transform: uppercase;
+    margin-right: 50px;
+
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+.a {
+    padding: 10px;
+}
+.a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    padding: 9px 25px;
+    background-color: rgba(247, 247, 247, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #050505;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: black;
+}
+button:hover {
+    background-color: rgba(247, 247, 247, 0.8);
+}
+.button_link{
+    color: #050505;
+    text-decoration: none;
+    background-color: rgba(247, 247, 247, 1);
+    transition: all 0.3s ease 0s;
+}
+.button_link:hover {
+    background-color: rgba(247, 247, 247, 0.8);
+}
+.button_link_red{
+    color: #f3f3f3;
+    text-decoration: none;
+    background-color: rgb(173, 20, 20);
+    transition: all 0.3s ease 0s;
+    padding: 15px 50px;
+    font-size: 25px;
+}
+.button_link_red:hover {
+    background-color: rgba(145, 5, 5, 0.8);
+}
+.button_link_blue{
+    color: #f3f3f3;
+    text-decoration: none;
+    background-color: rgb(17, 112, 189);
+    transition: all 0.3s ease 0s;
+    padding: 15px 50px;
+    font-size: 25px;
+}
+.button_link_blue:hover {
+    background-color: rgba(0, 89, 148, 0.8);
+}
+
+/* Styles for the main page on the website */
+
+.title_text {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.hero_text {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: auto;
+    padding-right: auto;
+}
+.menu-button {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.menu-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.FAQ {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+.Question {
+    padding-top: 20px;
+}
+.bar_faq {
+    background-color: rgb(128, 128, 128);
+    padding-top: 0.1rem;
+    padding-bottom: 0rem;
+    padding-left: 50%;
+    padding-right: 50%;
+    border-radius: 0px;
+
+}
+.reveal {
+    /*position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    */
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1 ;
+}
+.what {
+    padding: 50px 80px;
+}
+.how_to_buy {
+    padding: 50px 80px;
+}
+.how_to_buy h3, .how_to_buy h2, .how_to_buy, .how_to_buy .reveal, .how_to_buy h1 {
+    background-color: rgb(221, 221, 221);
+    color: rgb(26, 26, 26);
+
+}
+.how_to_buy h1 {
+    font-weight: 700;
+}
+.how_to_buy h2 {
+    font-weight: 700;
+}
+.how_to_buy a {
+    background-color:rgb(221, 221, 221); 
+    color:rgb(26, 26, 26);
+
+}
+.step {
+    padding: 3px 0;
+}
+.FAQ {
+    padding: 50px 80px;
+}
+
+
+.footer {
+    background-color: black;
+    color: rgb(177, 177, 177); 
+    text-align: center;
+    padding: 10px;
+}
+.footer h4 {
+    background-color: black;
+}
+
+
+/* For mobile devices and tablets only */
+@media(max-width: 1220px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+
+    .menu-button {
+        display: flex
+    }
+    #button_nav {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .nav_links li{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        padding: auto;
+        margin: auto;
+    }
+    .nav_links{
+        display: none;
+    }
+
+    .nav_links.active {
+        display: flex;
+    }
+    .title_text {
+        font-size: 35px;
+        padding: 10% 0;
+        padding-bottom: 30px;
+        padding-top: 0px;
+    }
+    .hero_text {
+        padding-bottom: 10px;
+    }
+    .button_link_red, .button_link_blue {
+        padding: 15px 45px;
+        font-size: 20px;
+    }
+
+    .what {
+        padding: 10px 5%;
+        padding-bottom: 50px;
+    }
+    .how_to_buy h3, .how_to_buy h2, .how_to_buy, .how_to_buy .reveal, .how_to_buy h1 {
+        padding: 0% 10px;
+        background-color: rgb(221, 221, 221);
+        color: rgb(26, 26, 26);
+    }
+    .how_to_buy {
+        padding-top: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 50px;
+    }
+    .how_to_buy h1 {
+        font-weight: 700;
+    }
+    .how_to_buy h2 {
+        font-weight: 700;
+        font-size: 25px;
+    }
+    .how_to_buy a {
+        background-color:rgb(221, 221, 221); 
+        color:rgb(26, 26, 26); 
+    }
+    .FAQ {
+        padding: 50px 5%;
+    }
+    .FAQ h2 {
+        font-weight: 700;
+        font-size: 25px;
+    }
+}
