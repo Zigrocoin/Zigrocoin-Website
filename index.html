@@ -6,6 +6,9 @@
     <link rel="icon" type="image/png" href="images/Zigrocoin logo.png"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+    <meta name="handheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="240">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="scroll-out.js"></script>
@@ -16,12 +19,12 @@
         <a href="index.html" class="logo"><img src="images/website logo 2.png" alt="Zigrocoin" class="logo" ></a>
         <nav id = "navigation_bar">
             <ul class="nav_links">
-                <li><a class="a" href = "what_is_zgc.html">What is Zigrocoin?</a></li>
-                <li><a class="a" href = "how_to.html">How to buy</a></li>
-                <li><a class="a" href = "faq.html">Faq</a></li>
+                <li><a class="a" href = "#" id="what">What is Zigrocoin?</a></li>
+                <li><a class="a" href = "#" id="howto">How to buy</a></li>
+                <li><a class="a" href = "#" id="faq" >Faq</a></li>
             </ul>
         </nav>
-        <button class="button_link" id ="button_nav">Live charts</button>   
+        <button class="button_link" id ="button_nav"><a href="https://charts.bogged.finance/?token=0x1fEAF532C209592d03594F374AF0B58c847Fb1f0">Live charts</a></button>   
         <a href="#" class="menu-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -33,8 +36,8 @@
         <div class="hero_text">
             <h1 class = "h0 title_text">Zigrocoin is an open source BEP20 token based on Binance Smart Chain.</h1>
             <div>
-                <button class="button_link_blue">twitter</button>
-                <button class="button_link_red">how to buy</button>
+                <button class="button_link_blue"><a href="https://twitter.com/zigrocoin">twitter</a></button>
+                <button class="button_link_red" id="howto_button" >how to buy</button>
             </div>
         </div>
     </section>

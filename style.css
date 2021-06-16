@@ -6,16 +6,18 @@ Version 1.0
 
 /* Reffers to the whole website */
 * {
-    background-color: #191919;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
+body {
+    background-color: rgb(12, 12, 12);
+}
+
 
 /* basic elements styles */
 .h0,h1,h2,h3,h4,p {
     color:#ececec;
 }
-
 .h0 {
     font-size: 50px;
 }
@@ -43,7 +45,23 @@ a {
 /* Navbar Styles */
 nav, .nav_links, .nav_links li, .logo, header, li, .a, button {
     background-color: #080808;
-    opacity: 100%;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 5%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    
+
 }
 
 li,.a,button {
@@ -52,20 +70,6 @@ li,.a,button {
     font-size: 20px;
     color: #ececec;
     text-decoration: none;
-
-}
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 15px 5%;
-
-}
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-    
-
 }
 .nav_links {
     list-style: none;
@@ -76,13 +80,28 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0 20px;
-
 }
 .a {
     padding: 10px;
 }
 .a:hover {
     text-decoration: underline;
+}
+.menu-button { /* Mobile only */
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.menu-button .bar { /* Mobile only */
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* Buttons */
@@ -131,6 +150,15 @@ button:hover {
 .button_link_blue:hover {
     background-color: rgba(0, 89, 148, 0.8);
 }
+.button_link a {
+    text-decoration: none;
+    background: none;
+    color: #050505;
+}
+.button_link_blue a {
+    text-decoration: none;
+    background: none;
+}
 
 /* Styles for the main page on the website */
 
@@ -141,31 +169,49 @@ button:hover {
 
 .hero_text {
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 250px;
+    padding-bottom: 200px;
     padding-left: auto;
     padding-right: auto;
 }
-.menu-button {
-    position: absolute;
-    top: 2.5rem;
-    right: 3rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+.hero {
+    background-image: url(./images/Background.jpg);
+    background-size: 100% 100%;
+    left: 0px;
+    padding-left: 0px;
 }
-.menu-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
+/* What is Zigrocoin section */
+.what {
+    padding: 100px 200px;
+    background-color: #080808;
+    left: 0px;
 }
+
+/* How to buy section */
+.how_to_buy {
+    padding: 100px 200px;
+}
+.how_to_buy h3, .how_to_buy h2, .how_to_buy, .how_to_buy .reveal, .how_to_buy h1 {
+    background-color: rgb(221, 221, 221);
+    color: rgb(26, 26, 26);
+
+}
+.how_to_buy h1, .how_to_buy h2 {
+    font-weight: 700;
+}
+.how_to_buy a {
+    background-color:rgb(221, 221, 221); 
+    color:rgb(26, 26, 26);
+
+}
+.step {
+    padding: 3px 0;
+}
+
+/* Frequently asked questions section */
 .FAQ {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
+
+    padding: 100px 200px;
 }
 .Question {
     padding-top: 20px;
@@ -179,46 +225,6 @@ button:hover {
     border-radius: 0px;
 
 }
-.reveal {
-    /*position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    */
-}
-.reveal.active {
-    transform: translateY(0px);
-    opacity: 1 ;
-}
-.what {
-    padding: 50px 80px;
-}
-.how_to_buy {
-    padding: 50px 80px;
-}
-.how_to_buy h3, .how_to_buy h2, .how_to_buy, .how_to_buy .reveal, .how_to_buy h1 {
-    background-color: rgb(221, 221, 221);
-    color: rgb(26, 26, 26);
-
-}
-.how_to_buy h1 {
-    font-weight: 700;
-}
-.how_to_buy h2 {
-    font-weight: 700;
-}
-.how_to_buy a {
-    background-color:rgb(221, 221, 221); 
-    color:rgb(26, 26, 26);
-
-}
-.step {
-    padding: 3px 0;
-}
-.FAQ {
-    padding: 50px 80px;
-}
-
-
 .footer {
     background-color: black;
     color: rgb(177, 177, 177); 
@@ -228,7 +234,6 @@ button:hover {
 .footer h4 {
     background-color: black;
 }
-
 
 /* For mobile devices and tablets only */
 @media(max-width: 1220px) {
@@ -246,25 +251,39 @@ button:hover {
         display: none;
     }
     header {
+        position: fixed;
         flex-direction: column;
         align-items: flex-start;
-
-    }
-    .nav_links li{
-        flex-direction: column;
         width: 100%;
-        text-align: center;
-        font-size: 40px;
-        padding: auto;
-        margin: auto;
-    }
-    .nav_links{
-        display: none;
-    }
 
+    }
+    .nav_links {
+        right: 0px;
+        top: 8vh;
+        height: 100px;
+        width: 100%;
+        display: none;
+        align-items: center;
+        flex-direction: column;  
+        padding-bottom: 50px;
+        margin-right: 0%;
+    }
+    .nav_links li {
+        padding: 20px 0;
+    }
     .nav_links.active {
         display: flex;
     }
+    .navigation_bar {
+        width: 100%;
+        padding-left: 50%;
+        padding-right: 50%;
+    }
+    .hero_text {
+        padding-top: 150px;
+    }
+
+
     .title_text {
         font-size: 35px;
         padding: 10% 0;
@@ -277,6 +296,7 @@ button:hover {
     .button_link_red, .button_link_blue {
         padding: 15px 45px;
         font-size: 20px;
+        margin: 5px;
     }
 
     .what {
