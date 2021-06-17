@@ -10,7 +10,7 @@ Version 1.0
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(20, 20, 20);
 }
 
 
@@ -46,7 +46,7 @@ a {
 nav, .nav_links, .nav_links li, .logo, header, li, .a, button {
     background-color: #080808;
 }
-header {
+.header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -55,7 +55,12 @@ header {
     position: fixed;
     top: 0px;
     left: 0px;
+    
 }
+.header.opacity {
+    opacity: 0.5;
+}
+
 
 .logo {
     cursor: pointer;
@@ -165,6 +170,8 @@ button:hover {
 .title_text {
     padding-left: 20%;
     padding-right: 20%;
+    text-shadow: 0 0 10px black, 0 0 30px black;
+
 }
 
 .hero_text {
@@ -176,14 +183,14 @@ button:hover {
 }
 .hero {
     background-image: url(./images/Background.jpg);
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
     left: 0px;
     padding-left: 0px;
 }
 /* What is Zigrocoin section */
 .what {
     padding: 100px 200px;
-    background-color: #080808;
     left: 0px;
 }
 
@@ -245,11 +252,18 @@ button:hover {
     }
 
     .menu-button {
-        display: flex
+        display: flex;
+        top: 28px;
     }
     #button_nav {
         display: none;
     }
+    .logo {
+        align-items: center;
+        height: 50px;
+    }
+
+
     header {
         position: fixed;
         flex-direction: column;
@@ -268,11 +282,13 @@ button:hover {
         padding-bottom: 50px;
         margin-right: 0%;
     }
+    .nav_links .active {
+        display: flex;
+    }
+
+
     .nav_links li {
         padding: 20px 0;
-    }
-    .nav_links.active {
-        display: flex;
     }
     .navigation_bar {
         width: 100%;
@@ -289,7 +305,14 @@ button:hover {
         padding: 10% 0;
         padding-bottom: 30px;
         padding-top: 0px;
+        text-shadow: 0 0 10px black, 0 0 10px black;
+
     }
+    .hero {
+        background-size: 1200px, 1200px;
+        padding-bottom: 50px;
+    }
+
     .hero_text {
         padding-bottom: 10px;
     }
@@ -300,9 +323,14 @@ button:hover {
     }
 
     .what {
+        padding-top: 80px;
         padding: 10px 5%;
         padding-bottom: 50px;
     }
+    .what h1 {
+        padding-top: 50px;
+    }
+
     .how_to_buy h3, .how_to_buy h2, .how_to_buy, .how_to_buy .reveal, .how_to_buy h1 {
         padding: 0% 10px;
         background-color: rgb(221, 221, 221);
